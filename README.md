@@ -14,14 +14,14 @@ Reference:
 
 ## Config
 
-- `host.md` used for /etc/hosts to access github conveniently
+- `host.txt` used for /etc/hosts to access github conveniently
 
-- `fish_confgi.md` used for fish config, but I don't use fish any more because of its conflict with bash. So I use zsh with oh-my-zsh to replace it.
+- `fish_confgi.txt` used for fish config, I don't use fish any more because of its conflict with bash. So I use zsh with oh-my-zsh to replace it.
 
 - `zsh` https://www.cnblogs.com/Likfees/p/14646078.html
 
-- `vimrc.md` used for Vim config. Especially, we use `Ctrl + a` to replace `Home` and `Ctrl + e` to replace `End`.
+- `vimrc.txt` used for Vim config. Especially, we use `Ctrl + a` to replace `Home` and `Ctrl + e` to replace `End`.
 
 ## Shell Commands
 
-`shell.md`: Linux shell commands and some other coding for shell
+`shell.txt`: Linux shell commands and some other coding for shell
