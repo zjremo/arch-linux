@@ -24,4 +24,4 @@ Reference:
 
 ## Shell Commands
 
-`shell.txt`: Linux shell commands and some other coding for shell
+`shell.md`: Linux shell commands and some other coding for shell
