@@ -22,6 +22,15 @@ Reference:
 
 - `vimrc.txt` used for Vim config. Especially, we use `Ctrl + a` to replace `Home` and `Ctrl + e` to replace `End`.
 
+- `starship.txt` used for starship config
+
+- `flatpak` https://www.cnblogs.com/lwlnice/p/18263967 里面的其中一步可能会报错路径不存在，直接使用Vim在`/etc/environment`中添加`XDG_DATA_DIRS=/home/jrz/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share`
+
+
 ## Shell Commands
 
 `shell.md`: Linux shell commands and some other coding for shell
+
+## wallpaper
+
+https://haowallpaper.com/homeViewLook/16715497910422912

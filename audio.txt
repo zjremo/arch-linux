@@ -1,0 +1,23 @@
+audio card解决，针对设备为Thinkbook T14p
+
+这个核心问题就是内核加载的是最新的驱动`sof-audio-pci-intel-mtl`，但这个在arch linux中可能会存在问题。
+
+`sof-audio-pci-intel-mtl`需要特定的固件才能使用。
+
+Steps :
+
+1. install sof-firmware for sof-audio-pci-intel-mtl
+
+sudo pacman -S sof-firmware
+
+2. install  PipeWire(现代 Arch 默认音频服务) 
+
+sudo pacman -S pipewire pipewire-jack pipewire-pulse pipewire-alsa pipewire-zeroconf
+
+3. start PipeWire modern Service
+
+systemctl --user --now enable pipewire pipewire-pulse
+
+4. check if auth device to be found 这个一般是需要reboot才可以发现设备出现
+
+aplay -l
