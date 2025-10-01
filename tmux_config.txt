@@ -1,4 +1,4 @@
-bind -n C-K resize-pane -U 10
+bind -n C-k resize-pane -U 10
 bind -n C-j resize-pane -D 10
 bind -n C-h resize-pane -L 10
 bind -n C-l resize-pane -R 10
