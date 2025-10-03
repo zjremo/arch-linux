@@ -24,7 +24,8 @@
 | history                             | 查询最近使用过的命令列表，与cat ~/.bash_history的功能类似              |
 | alias                               | 展示所有使用别名的命令                                                 |
 | alias [command_alias]="old command" | 将old command 用command_alias进行代替                                  |
+| unalias command_alias             | 去除这个别名                                                                       |
 | printenv                            | 显示全局变量                                                           |
-
+| my_variable = "I am global now"     | 创建局部变量                                                           |
 
 
