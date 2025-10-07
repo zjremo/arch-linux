@@ -1,0 +1,14 @@
+i3的配置主要是以下方面：
+1. 中文输入法；
+2. 触控板touchpad；
+3. wallpaper采用feh来进行设置；
+4. 调节声音和调节亮度。其中亮度的F5和F6需要进行设置；
+5. 打开超级键+Enter之后需要启用终端进行更改，比如这里就设置的是alacritty；
+6. picom后端启动，这个是渲染壁纸需要的；
+7. polybar配置及启动，采用开源项目https://github.com/adi1090x/polybar-themes进行配置。主要是修改里面的网卡、backbrightness等信息；
+8. 常用app启动快捷键配置，比如edge、okular和rofi；
+9. rofi的配置。
+
+其他方面：
+1. polybar中的主题字体和bar宽度高度调整；
+2. rofi中的大小调整。
