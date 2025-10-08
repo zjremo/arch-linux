@@ -7,7 +7,8 @@ i3的配置主要是以下方面：
 6. picom后端启动，这个是渲染壁纸需要的；
 7. polybar配置及启动，采用开源项目https://github.com/adi1090x/polybar-themes进行配置。主要是修改里面的网卡、backbrightness等信息；
 8. 常用app启动快捷键配置，比如edge、okular和rofi；
-9. rofi的配置。
+9. rofi的配置, 涉及到使用相应的主题进行启动;
+10. 目前i3在网页中无法上传文件，已经放弃。采用KDE plasma + i3混合配置，办公等多用KDE，编程开发等使用i3轻量提效
 
 其他方面：
 1. polybar中的主题字体和bar宽度高度调整；
