@@ -1,0 +1,27 @@
+1. manage venv:
+
+# 初始化项目
+uv venv
+
+# 激活环境
+source .venv/bin/activate
+
+# 退出环境
+deactivate
+
+2. 安装包
+uv add [Package]
+
+3. 卸载包
+uv remove [Package]
+
+使用uv add 和 uv remove可以完美的解决所有的依赖和孤儿包问题，所以一般不推荐使用uv pip install [Package]方法来安装包
+
+4. 导出当前接受依赖管理的包，而不是虚拟环境的所有包:
+uv export --format requirements.txt --no-hashes > requirements.txt
+
+5. 导出虚拟环境中的所有包信息：
+uv pip freeze > requirements.txt
+
+6. 使用pip安装requirements.txt中的包:
+uv pip install -r requirements.txt

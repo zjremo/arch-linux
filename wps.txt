@@ -8,7 +8,17 @@ export GTK_IN_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XIMODIFIERS=@im=fcitx
 
-2. wps配置
+2. 环境变量设置:
+chmod 777 /etc/environment
+sudo vim /etc/environment
+
+fcitx5添加:
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+INPUT_METHOD=fcitx
+
+3. wps配置
 vim /usr/bin/wps
 
 文件开头加入两行代码：
