@@ -29,3 +29,28 @@
 | my_variable = "I am global now"     | 创建局部变量                                                           |
 
 
+shell脚本编写过程中，第一行可以写上指定用什么bash：
+``sh
+#!/usr/bin/env zsh
+``
+或者
+``sh
+#/!usr/bin/zsh
+``
+其中第一个表示直接从系统path里面找，更具实用性；第二个直接写死使用zsh
+
+输出重定向：
+who > 1.txt	将命令who的输出内容输出到1.txt中，会覆写文本里面的内容
+who >> 1.txt 将命令who的输出内容追加到1.txt中
+
+输入重定向:
+wc < 1.txt 其中<符号用于文件输入
+wc << EOF
+test String 1
+test String 2
+test String 3
+EOF
+
+<<内联输入重定向符号，可以无需使用文件进行重定向，只需在命令行中指定用于输入重定向的数据就可以了
+
+

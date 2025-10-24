@@ -1,16 +1,24 @@
-print("hello, world")
+a = 5
+local b = 5
 
--- 不给明时候键就从1开始
-tab1 = { key1 = "val1", key2 = "val2", "val3", "val4" }
-for k, v in pairs(tab1) do
-	print(k .. "-" .. v)
-end
-print("----------------------")
-tab1.key1 = nil
-
-for k, v in pairs(tab1) do
-	print(k .. "-" .. v)
+function joke()
+	c = 5
+	local d = 6
 end
 
-print(type(2))
-print(type(2.2))
+joke()
+print(c, d)
+
+do
+	local a = 6
+	b = 6
+	print(a, b)
+end
+
+print(a, b)
+
+a, b, c = 0, 1
+print(a, b, c)
+
+a, b = a + 1, b + 1, c + 1
+print(a, b)
