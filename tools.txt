@@ -1,0 +1,18 @@
+学习网站：
+1. https://www.linuxdoc.org/guides.html
+2. https://www.commandlinefu.com/commands/browse
+
+查询天气：
+curl wttr.in/TianJin
+
+sh 学习：
+https://github.com/dylanaraps/pure-sh-bible
+https://github.com/dylanaraps/pure-bash-bible
+
+dns解析：
+sudo pacman -S bind
+
+dig +short www.baidu.com
+
+
+

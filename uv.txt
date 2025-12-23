@@ -1,7 +1,10 @@
 1. manage venv:
 
 # 初始化项目
-uv venv
+uv init
+
+# 创建虚拟环境
+uv venv --python <version> .venv
 
 # 激活环境
 source .venv/bin/activate

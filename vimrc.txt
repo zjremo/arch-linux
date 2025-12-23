@@ -3,6 +3,7 @@ set clipboard=unnamedplus
 
 " 显示行号
 set number
+set relativenumber
 
 " 高亮搜索
 set hlsearch
@@ -32,3 +33,14 @@ nnoremap <C-a> ^
 
 " 普通模式下 Ctrl-e 跳到行尾
 nnoremap <C-e> $
+" 可视模式下 Ctrl-a 跳到行首
+vnoremap <C-a> ^
+" 可视模式下 Ctrl-e 跳到行尾
+vnoremap <C-e> $
+
+" 搜索时不区分大小写
+set ignorecase
+
+" 搜索中出现大写字母，区分大小写
+set smartcase
+
