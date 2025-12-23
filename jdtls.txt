@@ -1,1 +1,1 @@
-可能会报错找不到eclipse的错，此时运行JdtUpdateConfig即可，会重新更新类路径，如果还是报错就运行:JdtRestart 
+neovim中使用作为java lsp时，可能会报错找不到eclipse的错，此时运行JdtUpdateConfig即可，会重新更新类路径，如果还是报错就运行:JdtRestart 
