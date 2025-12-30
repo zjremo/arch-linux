@@ -1,20 +1,30 @@
-安装docker:
+# docker
+
+## docker配置安装
+
+```bash
+# docker安装
 sudo pacman -S docker
 
-使用docker配置:
+# docker服务开启
 sudo systemctl enable --now docker.service
 sudo systemctl start docker.service
-# 确保用户使用docker拥有权限设置，加入docker组
-sudo usermod -aG docker $USER
 
-测试:
+# 当前用户使用docker拥有权限设置，避免每次使用docker都要sudo，做法就是将用户加入docker组
+sudo usermod -aG docker $USER
+```
+
+## docker更换engine镜像源
+
+```bash
 docker ps
 
-配置国内镜像: 
+# 国内镜像配置
 sudo mkdir -p /etc/docker
 sudo vim /etc/docker/daemon.json
-写入以下内容：（两种选择）
-1. 
+
+# 写入以下内容并保存：（两种选择）
+1. 国内镜像源
 {
   "registry-mirrors": [
     "https://docker.m.daocloud.io",
@@ -22,13 +32,14 @@ sudo vim /etc/docker/daemon.json
     "https://hub-mirror.c.163.com"
   ]
 }
-2. 
+2. 轩辕镜像
 {
   "registry-mirrors": [
     "https://docker.xuanyuan.me/"
   ]
 }
 
-保存之后：
+# 重新加载engine，重启docker 
 sudo systemctl daemon-reload
 sudo systemctl restart docker
+```

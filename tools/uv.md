@@ -1,3 +1,9 @@
+# uv
+
+这是uv的相关配置和命令学习
+
+## uv常用命令
+```text
 1. manage venv:
 
 # 初始化项目
@@ -25,3 +31,4 @@ uv pip freeze > requirements.txt
 
 5. 使用pip安装requirements.txt中的包:
 uv pip install -r requirements.txt
+```

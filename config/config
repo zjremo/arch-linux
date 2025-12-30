@@ -11,9 +11,6 @@
 # bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh --hack
 
-# touchpad
-exec_always --no-startup-id ~/.config/i3/touchpad.sh
-
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -39,7 +36,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-exec_always --no-startup-id feh --bg-scale /home/jrz/Pictures/wallpaper.png
+exec_always --no-startup-id feh --bg-scale /home/jrz/Pictures/Anime-Girl-Night-Sky.jpg 
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -215,5 +212,6 @@ new_window 1pixel
 #bar {
 #        status_command i3status
 #}
+
 
 

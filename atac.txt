@@ -1,2 +1,0 @@
-atac是类postman的api发送器，用rust编写完全，速度较快
-但是目前不成熟，还是使用postman更好

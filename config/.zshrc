@@ -1,20 +1,3 @@
-starship.toml: 放置在~/.config/starship.toml
-
-# 为 IDE 提供 schema 实现自动补全
-"$schema" = 'https://starship.rs/config-schema.json'
-
-# 在提示符之间插入空行
-add_newline = true
-
-# 将提示符中的 '❯' 替换为 '$'
-[character] # 此组件名称为 'character'
-success_symbol = '[\$](bold green)'
-
-# 禁用 'package' 组件，将其隐藏
-[package]
-disabled = true
-
-.zshrc:
 # 可选：启用一些 Zsh 选项
 setopt HIST_IGNORE_DUPS
 
@@ -54,12 +37,11 @@ export PATH=~/.npm-global/bin:$PATH
 
 # claude code env config
 export ANTHROPIC_AUTH_TOKEN=
-export ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic
+export ANTHROPIC_BASE_URL=
 export API_TIMEOUT_MS=3000000
 export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
-export ANTHROPIC_MODEL=glm-4.6
-export ANTHROPIC_SMALL_FAST_MODEL=glm-4.5-airx
-
+export ANTHROPIC_MODEL=
+export ANTHROPIC_SMALL_FAST_MODEL=
 # yazi文本编辑器修改
 export EDITOR=vim
 
@@ -69,30 +51,30 @@ source /usr/share/fzf/completion.zsh
 
 # fd + fzf 的 Alt-C（改写 fzf-cd-widget），兼容取消时重绘 prompt
 fzf-cd-widget() {
-  local dir ret
+    local dir ret
 
-  # 调用 fd -> fzf
-  dir=$(fd . --type d --hidden --follow --exclude .git 2>/dev/null \
-        | fzf --height 40% --layout=reverse +m)
-  ret=$?   # 保存 fzf 的退出状态
+    # 调用 fd -> fzf
+    dir=$(fd . --type d --hidden --follow --exclude .git 2>/dev/null |
+        fzf --height 40% --layout=reverse +m)
+    ret=$? # 保存 fzf 的退出状态
 
-  # 如果用户没有选择（按 Esc/Ctrl-C）或 fzf 出错，重绘后返回
-  if [[ $ret -ne 0 || -z $dir ]]; then
+    # 如果用户没有选择（按 Esc/Ctrl-C）或 fzf 出错，重绘后返回
+    if [[ $ret -ne 0 || -z $dir ]]; then
+        zle reset-prompt 2>/dev/null || true
+        zle -R 2>/dev/null || true
+        return
+    fi
+
+    # 如果选择了目录，使用 builtin cd 切换；失败也重绘后返回
+    if ! builtin cd -- "$dir"; then
+        zle reset-prompt 2>/dev/null || true
+        zle -R 2>/dev/null || true
+        return
+    fi
+
+    # 切换成功后，确保 prompt/命令行立即更新
     zle reset-prompt 2>/dev/null || true
     zle -R 2>/dev/null || true
-    return
-  fi
-
-  # 如果选择了目录，使用 builtin cd 切换；失败也重绘后返回
-  if ! builtin cd -- "$dir"; then
-    zle reset-prompt 2>/dev/null || true
-    zle -R 2>/dev/null || true
-    return
-  fi
-
-  # 切换成功后，确保 prompt/命令行立即更新
-  zle reset-prompt 2>/dev/null || true
-  zle -R 2>/dev/null || true
 }
 
 zle -N fzf-cd-widget
@@ -100,4 +82,3 @@ bindkey '\ec' fzf-cd-widget
 
 # 初始化 Starship（必须放在最后）
 eval "$(starship init zsh)"
-

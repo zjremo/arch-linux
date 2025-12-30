@@ -1,2 +1,0 @@
-全部采取lazyvim配置，里面的展示使用MarkdownPreview插件。
-neovim中对中文一般会报警告，此时使用set nospell不区分拼写错误；同时使用leader+u+d来关闭警告即可.

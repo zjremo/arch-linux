@@ -1,5 +1,15 @@
-正常下载wps都无法输入中文，需要两步配置；
+# wps
 
+## wps下载
+
+```bash
+yay -S wps-office-cn wps-office-mui-zh-cn
+```
+
+## wps下载之后无法输入中文
+
+```text
+正常下载wps都无法输入中文，需要两步配置:
 1. ~/.xprofile配置
 vim ~/.xprofile
 
@@ -12,7 +22,7 @@ export XIMODIFIERS=@im=fcitx
 chmod 777 /etc/environment
 sudo vim /etc/environment
 
-fcitx5添加:
+添加fcitx5配置:
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
@@ -26,3 +36,6 @@ export XMODIFIERS="@im=fcitx"
 export QT_IM_MODULE="fcitx"
 
 3. reboot
+```
+
+

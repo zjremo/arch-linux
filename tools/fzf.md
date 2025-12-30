@@ -1,4 +1,16 @@
-1. ~/.zshrc中配置fzf进行配置加载实现快速跳转目录：
+# fzf
+
+fzf是一款文件快速查找工具，可以进行模糊搜索等操作
+
+## 目录快速跳转
+
+fzf可以结合fd等工具实现终端中的目录快速跳转，实现方式就是在`.zshrc`中添加相关写好的fzf脚本配置或者是利用终端命令
+
+```bash
+cd $(fd --type d | fzf)
+```
+
+```bash
 # 加载 fzf 默认的 zsh keybindings（含 fzf-cd-widget）
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
@@ -33,8 +45,12 @@ fzf-cd-widget() {
 
 zle -N fzf-cd-widget
 bindkey '\ec' fzf-cd-widget
+```
 
-2. 快捷键:
-Ctrl-T	用 fzf 选择文件/目录插入命令行
-Alt-C	用 fzf 选择目录并 cd
-Ctrl-R	模糊搜索命令历史
+最后的快捷键为:
+
+```text
+Ctrl-T 用 fzf 选择文件/目录插入命令行
+Alt-C 用 fzf 选择目录并 cd到那个目录下
+Ctrl-R 模糊搜索命令历史
+```
