@@ -9,7 +9,7 @@ yay -S wps-office-cn wps-office-mui-zh-cn
 ## wps下载之后无法输入中文
 
 ```text
-正常下载wps都无法输入中文，需要两步配置:
+正常下载wps都无法输入中文，需要以下配置:
 1. ~/.xprofile配置
 vim ~/.xprofile
 
@@ -35,7 +35,5 @@ vim /usr/bin/wps
 export XMODIFIERS="@im=fcitx"
 export QT_IM_MODULE="fcitx"
 
-3. reboot
+4. reboot
 ```
-
-

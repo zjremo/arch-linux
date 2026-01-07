@@ -36,12 +36,13 @@ export PATH="$MASON/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 
 # claude code env config
-export ANTHROPIC_AUTH_TOKEN=
-export ANTHROPIC_BASE_URL=
+export ANTHROPIC_AUTH_TOKEN=4b3cb6805e8b4b6cbae973020d71ce3d.PvjwCHsiHNlBXnyB
+export ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic
 export API_TIMEOUT_MS=3000000
 export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
-export ANTHROPIC_MODEL=
-export ANTHROPIC_SMALL_FAST_MODEL=
+export ANTHROPIC_MODEL=glm-4.7
+export ANTHROPIC_SMALL_FAST_MODEL=glm-4.5-airx
+
 # yazi文本编辑器修改
 export EDITOR=vim
 
@@ -79,6 +80,9 @@ fzf-cd-widget() {
 
 zle -N fzf-cd-widget
 bindkey '\ec' fzf-cd-widget
+
+# fzf预览功能结合bat
+alias fzfp='fzf --preview "bat --color always {}"'
 
 # 初始化 Starship（必须放在最后）
 eval "$(starship init zsh)"

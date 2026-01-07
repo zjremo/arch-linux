@@ -2,6 +2,12 @@
 
 tldr可以快捷地查看Linux各种终端命令的使用用法
 
+## 安装命令
+
+```bash
+yay -S tlrc
+```
+
 ## 使用样例
 
 ```bash
@@ -82,5 +88,3 @@ $ tldr dig
 
     dig +tcp -p port @dns_server_ip example.com
 ```
-
-
