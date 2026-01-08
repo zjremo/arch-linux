@@ -61,7 +61,7 @@ XDG_DATA_DIRS=/home/jrz/.local/share/flatpak/exports/share:/var/lib/flatpak/expo
 - 文件搜索: fzf fd grep ripgrep
 - Markdown终端文件查看: glow
 - 终端代码高亮预览工具: bat
-- Api检测工具: Postman
+- Api调用检测工具: Postman
 - git: Lazygit (**无敌好用**)
 - 应用程序管理器: rofi and dmenu
 - 远程连接ssh: vscode and terminal
@@ -88,7 +88,7 @@ XDG_DATA_DIRS=/home/jrz/.local/share/flatpak/exports/share:/var/lib/flatpak/expo
 # 首先查看设备，找到Touchpad对应的id
 $ xinput list
 
-# 然后查看Touchpad对于的具体功能设置
+# 然后查看Touchpad对应的具体功能设置
 $ xinput list-props [id]
 
 # 寻找以下两行内容, 分别对应的是触控板轻点触发和滚轮反向滚动
