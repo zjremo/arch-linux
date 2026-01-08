@@ -60,6 +60,7 @@ XDG_DATA_DIRS=/home/jrz/.local/share/flatpak/exports/share:/var/lib/flatpak/expo
 - Linux命令查看: tldr and man
 - 文件搜索: fzf fd grep ripgrep
 - Markdown终端文件查看: glow
+- 终端代码高亮预览工具: bat
 - Api检测工具: Postman
 - git: Lazygit (**无敌好用**)
 - 应用程序管理器: rofi and dmenu

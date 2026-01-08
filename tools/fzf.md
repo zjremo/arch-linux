@@ -88,7 +88,11 @@ unalias ** + Tab
 # cd命令，可以利用tree来预览目录信息
 cd ** + Tab
 ```
-上述`cd ** + Tab`的实现需要在`.zshrc`中进行配置，添加：
+
+### 补充说明
+
+1. 上述`cd ** + Tab`的实现需要在`.zshrc`中进行配置，添加：
+
 ```text
 # fzf cd目录预览
 _fzf_comprun() {
@@ -101,3 +105,17 @@ _fzf_comprun() {
     esac
 }
 ```
+
+## 效果展示
+
+### 目录快速跳转
+
+![fzf快速跳转目录](../img/fzf2.png)
+
+### 终端高亮显示文本
+
+![bat结合fzf](../img/fzf3.png)
+
+### cd目录预览功能
+
+![cd展示](../img/fzf1.png)
