@@ -81,6 +81,17 @@ fzf-cd-widget() {
 zle -N fzf-cd-widget
 bindkey '\ec' fzf-cd-widget
 
+# fzf cd目录预览
+_fzf_comprun() {
+    local command=$1
+    shift
+
+    case "$command" in
+    cd) fzf --preview 'tree {}' "$@" ;;
+    *) fzf "$@" ;;
+    esac
+}
+
 # fzf预览功能结合bat
 alias fzfp='fzf --preview "bat --color always {}"'
 

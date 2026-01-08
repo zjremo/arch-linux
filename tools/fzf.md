@@ -85,4 +85,19 @@ kill ** + Tab
 unset ** + Tab
 # unalias命令，列出所有的别名
 unalias ** + Tab
+# cd命令，可以利用tree来预览目录信息
+cd ** + Tab
+```
+上述`cd ** + Tab`的实现需要在`.zshrc`中进行配置，添加：
+```text
+# fzf cd目录预览
+_fzf_comprun() {
+    local command=$1
+    shift
+
+    case "$command" in
+    cd) fzf --preview 'tree {}' "$@" ;;
+    *) fzf "$@" ;;
+    esac
+}
 ```
