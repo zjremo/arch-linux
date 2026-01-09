@@ -24,7 +24,7 @@ sudo systemctl status NetworkManager
 nmcli device list
 
 # 检测当前地区WIFI
-nmcli wifi list
+nmcli device wifi list
 
 # 连接其中的一个WIFI, 假设为ASUS_5G, 密码是cyber626, 使用网卡wlp0s20f3
 nmcli device wifi connect "ASUS_5G" password "cyber626" ifname wlp0s20f3 
