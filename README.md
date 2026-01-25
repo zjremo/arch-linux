@@ -47,7 +47,7 @@ XDG_DATA_DIRS=/home/jrz/.local/share/flatpak/exports/share:/var/lib/flatpak/expo
 ### 外观渲染
 
 - 桌面壁纸：`feh`渲染
-- 状态栏：`polybar`开源项目
+- 状态栏：<https://github.com/adi1090x/polybar-themes>
 - WM Compositor：`picom`
 - terminal：`alacrity starship`
 
