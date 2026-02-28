@@ -44,3 +44,5 @@ set ignorecase
 " 搜索中出现大写字母，区分大小写
 set smartcase
 
+" 主题设置
+colorscheme evening
