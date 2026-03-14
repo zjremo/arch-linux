@@ -21,6 +21,9 @@ echo -ne "\e]12;#ffffff\a"
 # clear设置alias
 alias c="clear"
 
+# ls -Fl 设置
+alias ll="ls -Fl"
+
 # lazygit设置lg
 alias lg="lazygit"
 
@@ -36,7 +39,7 @@ export PATH="$MASON/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 
 # claude code env config
-export ANTHROPIC_AUTH_TOKEN=4b3cb6805e8b4b6cbae973020d71ce3d.PvjwCHsiHNlBXnyB
+export ANTHROPIC_AUTH_TOKEN=
 export ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic
 export API_TIMEOUT_MS=3000000
 export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
@@ -94,6 +97,13 @@ _fzf_comprun() {
 
 # fzf预览功能结合bat
 alias fzfp='fzf --preview "bat --color always {}"'
+
+# aliyun configuration
+export OSS_ACCESS_KEY_ID=
+export OSS_ACCESS_KEY_SECRET=
+
+# JVM分辨率调整
+export JAVA_TOOL_OPTIONS="-Dsun.java2d.uiScale=2"
 
 # 初始化 Starship（必须放在最后）
 eval "$(starship init zsh)"
